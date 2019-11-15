@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title></title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="container-fluid">
+        <!-- Content here -->
+
+        <div class="row">
+
+            <div class="col-3">
+                <!-- this column needs a text input that will search the api for the city name
+   then it needs to write to local storage, and append each name to a list of cities we searched. these values create a search history, which can be accessed later by onclick to provide real time statistics on current weather data
+     -->
+                <h3>Search for a city</h3>
+
+                <!-- Our search criteria needs to become the input for our API request.  -->
+                <input id="city-input" type="text">
+
+                <button type="button" class="btn btn-primary" id="searchbutton">Search</button>
+                <div id="searchhistory">
+
+                    
+                </div>
+
+            </div>
+
+
+            <div class="col-9">
+
+                <div class="row" id="currentweather">
+                    <!-- This row needs to pull data from our API to display temp/humd/uv/wind/city name/date. It needs to use the criteria our user inputs on "city-input" for its API request -->
+
+
+
+
+
+                </div>
+
+                <div class="row">
+                    <!-- this row needs five cards, each with a seperate day forecast -->
+                    <div class="card" style="width: 11rem;">
+
+                        <div class="card-body" id="day1">
+                            
+
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 11rem;">
+
+                        <div class="card-body" id="day2">
+                            
+
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 11rem;">
+
+                        <div class="card-body" id="day3">
+                          
+
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 11rem;">
+
+                        <div class="card-body" id="day4">
+                       
+
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 11rem;">
+
+                        <div class="card-body" id="day5">
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"> </script>
+</body>
+
+</html>
