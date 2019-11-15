@@ -7,7 +7,7 @@ $("#searchbutton").on("click", function () {
   localStorage.setItem("city", JSON.stringify(cityvalue));
   var APIKey = "d06517398e8aaaadf62b3b9e18d611c1";
   
-  var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&appid=${APIKey}&units=imperial`
+  var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&appid=${APIKey}&units=imperial`
     ;
 
   var callcity5day = `https://api.openweathermap.org/data/2.5/forecast?q=${cityvalue}&appid=${APIKey}&units=imperial`
