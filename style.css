@@ -1,7 +1,19 @@
+#weathercards{
+padding: 40px;
+}
+
+#currentweather{
+padding: 40px;
+
+}
+
 .header {
-  padding: 20px;
+  padding: 60px;
   text-align: center;
-  background: Gray;
+  background-image: url("./images/sky.jpg");
   color: Black;
   font-size: 30px;
+  background-size: 1550px;
+  
+
 }
