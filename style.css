@@ -1,9 +1,9 @@
 #weathercards{
-padding: 40px;
+  padding: 40px;
 }
 
 #currentweather{
-padding: 40px;
+  padding: 40px;
 
 }
 
@@ -14,6 +14,9 @@ padding: 40px;
   color: Black;
   font-size: 30px;
   background-size: 1550px;
-  
+  }
+
+#search-history{
+  padding: 20px;
 
 }

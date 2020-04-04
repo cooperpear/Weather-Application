@@ -1,11 +1,26 @@
-var searchHistory = localStorage.getItem("city")
+// https://stackoverflow.com/questions/29133664/how-do-i-add-multiple-objects-of-a-similar-type-to-local-storage
 
-$("#search-history").append(searchHistory);
+var searchhistory = localStorage.getItem("names")
+
+// $("#search-history").append(searchhistory);
+var cityNames = [];
 
 $("#search-button").on("click", function () {
   var cityvalue = $("#city-input").val().trim()
-  localStorage.setItem("city", JSON.stringify(cityvalue));
-  
+
+
+  var names = {
+    id: cityNames.length,
+    city: cityvalue
+  }
+
+  cityNames.push(names);
+
+  //use an array to store multiple city names. use this outside of button function?
+  localStorage.setItem("names", JSON.stringify(cityNames));
+
+  $("#search-history").html(searchhistory);
+
   var APIKey = "d06517398e8aaaadf62b3b9e18d611c1";
   var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&appid=${APIKey}&units=imperial`;
   var callcity5day = `https://api.openweathermap.org/data/2.5/forecast?q=${cityvalue}&appid=${APIKey}&units=imperial`;
@@ -46,7 +61,7 @@ $("#search-button").on("click", function () {
     url: queryURL,
     method: "GET"
   })
-  // We store all of the retrieved data inside of an object called "response"
+    // We store all of the retrieved data inside of an object called "response"
     .then(function (response) {
       console.log(response)
       $("#current-weather").empty();
@@ -64,5 +79,5 @@ $("#search-button").on("click", function () {
 });
 
 
-console.log(searchHistory);
+console.log(searchhistory);
 
