@@ -5,6 +5,7 @@ $("#search-history").append(searchHistory);
 $("#search-button").on("click", function () {
   var cityvalue = $("#city-input").val().trim()
   localStorage.setItem("city", JSON.stringify(cityvalue));
+  
   var APIKey = "d06517398e8aaaadf62b3b9e18d611c1";
   var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&appid=${APIKey}&units=imperial`;
   var callcity5day = `https://api.openweathermap.org/data/2.5/forecast?q=${cityvalue}&appid=${APIKey}&units=imperial`;
@@ -38,37 +39,30 @@ $("#search-button").on("click", function () {
           j = j + 1;
         }
       }
-
-
-
-
     });
+
   //make our ajax request for current day forecase
   $.ajax({
     url: queryURL,
     method: "GET"
   })
-    // We store all of the retrieved data inside of an object called "response"
+  // We store all of the retrieved data inside of an object called "response"
     .then(function (response) {
       console.log(response)
-      $("#currentweather").empty();
-      $("#currentweather").append(`<h3> CityName: ${cityvalue}</h3><h3> WindSpeed: ${response.wind.speed}</h3><h3> Humidity: ${response.main.humidity}</h3><h3> Temperature: ${response.main.temp}</h3>`)
+      $("#current-weather").empty();
 
-
-
-
+      $("#current-weather").append(`<p> City Name: ${cityvalue}</p>
+                                  <p> Wind Speed: ${response.wind.speed}</p>
+                                  <p> Humidity: ${response.main.humidity}</p>
+                                  <p> Temperature: ${response.main.temp}</p>`)
 
       // Log the data in the console as well
       console.log("Wind Speed: " + response.wind.speed);
       console.log("Humidity: " + response.main.humidity);
       console.log("Temperature (F): " + response.main.temp);
     });
-
-
-
-
 });
 
 
-
+console.log(searchHistory);
 
