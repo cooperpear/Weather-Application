@@ -1,5 +1,11 @@
 #weathercards{
-  padding: 40px;
+  padding: 100px;
+  margin: auto;
+
+}
+
+#day1{
+
 }
 
 #currentweather{
@@ -13,7 +19,8 @@
   background-image: url("./images/sky.jpg");
   color: Black;
   font-size: 30px;
-  background-size: 1550px;
+  background-size: 1925px;
+  background-position: center;
   }
 
 #search-history{

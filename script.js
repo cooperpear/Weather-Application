@@ -15,6 +15,7 @@ $("#search-button").on("click", function () {
   }
 
   cityNames.push(names);
+ console.log(cityNames);
 
   //use an array to store multiple city names. use this outside of button function?
   localStorage.setItem("names", JSON.stringify(cityNames));
@@ -50,7 +51,7 @@ $("#search-button").on("click", function () {
       var j = 1;
       for (let i = 0; i < response.list.length; i++) {
         if (response.list[i].dt_txt.indexOf("00:00:00") !== -1) {
-          $(`#day${j}`).append(`<h6> Date: ${response.list[i].dt_txt} </h6><h6> Temp: ${response.list[i].main.temp} </h6> <h6> Humdity: ${response.list[i].main.humidity}`)
+          $(`#day${j}`).append(`<h5>Day ${j}</h5><h6> Date: ${response.list[i].dt_txt} </h6><h6> Temp: ${response.list[i].main.temp} </h6> <h6> Humdity: ${response.list[i].main.humidity}`)
           j = j + 1;
         }
       }
