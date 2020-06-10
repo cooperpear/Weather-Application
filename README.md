@@ -1,23 +1,28 @@
 # Weather Dashboard
+Weather Dashboard is a single page web browswer application that uses AJAX to request weather forecast information from "open weather map" API service. Display for user in web browser. 
 
-Weather Dashboard is a weather API 
+## Deployed
+https://cooperpear.github.io/Weather-Application/
 
-## Installation
+## Built With
+HTML5<br>
+Javascript<br>
+LocalStorage<br>
+AJAX<br>
+Bootstrap<br>
+Font Awesome
 
-Run Weather Dashboard in your browser. 
+## Areas of Expansion
+Extra front end style to come. 
 
-
-## Usage
-
-```python
-Enter the city name of for a Local Weather Report
-```
-
-## Author
+## Authors
 Cooper Pearson
+
+## Screenshots
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-Copyleft Cooper Pearson 2019
+Copyright 2019
