@@ -19,7 +19,7 @@ Extra front end style to come.
 Cooper Pearson
 
 ## Screenshots
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Home](https://github.com/cooperpear/Weather-Application/blob/master/screencapture-cooperpear-github-io-Weather-Application-2020-06-10-10_51_06.png?raw=true "Home")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
