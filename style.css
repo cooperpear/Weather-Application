@@ -20,8 +20,16 @@ body {
     line-height: 1.5;
 }
 
+#container {
+
+}
+
 #search {
 
+}
+
+#search h3 {
+  
 }
 
 #city-input {
@@ -32,24 +40,25 @@ body {
 
 }
 
-#search-history{
+#search-history {
   padding: 20px;
 
 }
 
-
-#weathercards{
- 
-}
-
-#day1{
-
-}
-
-#currentweather{
+#current-weather {
   padding: 40px;
 
 }
+
+#weather-cards {
+ 
+}
+
+.card {
+
+}
+
+
 
 
 
